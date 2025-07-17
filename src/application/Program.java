@@ -6,6 +6,7 @@ import dao.SellerDao;
 import entities.Department;
 import entities.Seller;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -34,6 +35,10 @@ public class Program {
             System.out.println(obj);
         }
 
+        System.out.println("=== TEST 4: Seller insert ===");
+        Seller newSeller = new Seller(null, 4000.0, LocalDate.parse("01/01/2002", formatter), "greg.gmail.com", "Greg", new Department(2, "Eletronics"));
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted Seller: " + newSeller.getId());
 
     }
 }
