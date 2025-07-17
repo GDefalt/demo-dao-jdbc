@@ -4,7 +4,6 @@ import dao.DaoFactory;
 import dao.DepartmentDao;
 
 import entities.Department;
-;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;
