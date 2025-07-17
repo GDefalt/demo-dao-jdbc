@@ -2,11 +2,10 @@ package application;
 
 import dao.DaoFactory;
 import dao.SellerDao;
-import dao.impl.SellerDaoJDBC;
+
 import entities.Department;
 import entities.Seller;
 
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -25,6 +24,13 @@ public class Program {
         List<Seller> list = sellerDao.findByDepartment(new Department(2, "Eletronics"));
 
         for(Seller obj : list) {
+            System.out.println(obj);
+        }
+
+        System.out.println("=== TEST 3: Seller findAll ===");
+        List<Seller> listAll = sellerDao.findAll();
+
+        for(Seller obj : listAll) {
             System.out.println(obj);
         }
 
