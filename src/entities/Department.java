@@ -26,6 +26,10 @@ public class Department implements Serializable {
         return Id;
     }
 
+    public void setId(Integer id) {
+        Id = id;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
